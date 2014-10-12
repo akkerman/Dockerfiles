@@ -1,16 +1,7 @@
-FROM resin/rpi-raspbian:wheezy
+FROM akkerman/rpi-nginx:wheezy
 
 MAINTAINER M. Akkerman
+add www /usr/share/nginx/www
 
-RUN apt-get update && apt-get install -y nginx
-
-# forward request and error logs to docker log collector
-RUN ln -sf /dev/stdout /var/log/nginx/access.log
-RUN ln -sf /dev/stderr /var/log/nginx/error.log
-
-VOLUME ["/usr/share/nginx/www"]
-VOLUME ["/etc/nginx"]
-
-EXPOSE 80 443
-
-CMD ["nginx", "-g", "daemon off;"]
+# docker build -t my-nginx-image .
+# docker run -p 80:80 --name my-nginx-container -d my-nginx-image 
