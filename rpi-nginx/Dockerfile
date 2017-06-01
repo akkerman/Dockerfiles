@@ -1,6 +1,6 @@
 FROM resin/rpi-raspbian:jessie
 
-MAINTAINER M. Akkerman
+LABEL maintainer "ikbenMarcelAkkerman@hotmail.com"
 
 RUN apt-get update && apt-get install -y nginx
 
