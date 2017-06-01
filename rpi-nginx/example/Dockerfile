@@ -1,6 +1,6 @@
 FROM akkerman/rpi-nginx:wheezy
 
-MAINTAINER M. Akkerman
+LABEL maintainer "ikbenMarcelAkkerman@hotmail.com"
 add www /usr/share/nginx/www
 
 # docker build -t my-nginx-image .
