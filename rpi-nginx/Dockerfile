@@ -1,4 +1,4 @@
-FROM resin/rpi-raspbian:jessie
+FROM resin/rpi-raspbian:jessie-20171227
 
 LABEL maintainer "ikbenMarcelAkkerman@hotmail.com"
 
